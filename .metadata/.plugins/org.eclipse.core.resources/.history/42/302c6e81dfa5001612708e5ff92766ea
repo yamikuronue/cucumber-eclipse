@@ -130,7 +130,7 @@ public class StepDefinitions implements IStepDefinitions {
 		});
 		
 		for (IType t : compUnit.getTypes()) {
-			for (IMethod method : t.getMethods()) {
+			for (final IMethod method : t.getMethods()) {
 				
 				//Check for older, annotation-style definitions
 				for (IAnnotation annotation : method.getAnnotations()) {
