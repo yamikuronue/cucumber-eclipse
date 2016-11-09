@@ -9,6 +9,7 @@ import org.eclipse.core.resources.IContainer;
 import org.eclipse.core.resources.IFile;
 import org.eclipse.core.resources.IFileState;
 import org.eclipse.core.resources.IMarker;
+import org.eclipse.core.resources.IPathVariableManager;
 import org.eclipse.core.resources.IProject;
 import org.eclipse.core.resources.IProjectDescription;
 import org.eclipse.core.resources.IResourceProxy;
@@ -362,4 +363,15 @@ public class TestFile implements IFile {
 
     public void setContents(IFileState source, int updateFlags, IProgressMonitor monitor) throws CoreException {
     }
+	
+	public void setDerived(boolean isDerived, IProgressMonitor monitor) throws CoreException {
+	}
+	
+	public boolean isVirtual() {
+		return false;
+	}
+	
+	public IPathVariableManager getPathVariableManager() {
+		return null;
+	}
 }
